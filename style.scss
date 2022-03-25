@@ -1,0 +1,373 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import "./sass/Utils/variables";
+@import "./sass/Base/base";
+@import "./sass/Layout/footer";
+
+#bloc_page{
+    width: 100%;
+}
+
+/** Logo **/
+.logo{
+    text-align: center;
+    height: 60px;
+    
+    p {
+        font-family: 'Shrikhand', sans-serif;
+        font-size: 40px;
+    }
+}
+
+
+/** Loading spinner **/
+.loader {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #FFF;
+    left: 0;
+    top: 0;
+    z-index: 10000;
+    animation: loader 3s forwards;
+}
+
+/*Animation loader*/
+
+@keyframes loader {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -10;
+    }
+}
+
+.loading__spinner {
+    border: 10px solid #F3F3F3;
+    border-top: 10px solid $couleur-primaire;
+    border-bottom: 10px solid $couleur-secondaire;
+    border-right: 10px solid $couleur-tertiaire;
+    border-left: 10px solid $couleur-tertiaire;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 3s linear forwards;
+
+    /*Placement du loader au milieu de la page*/
+
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/*Animation du loader circle*/
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/** Localisation **/
+#section_1{
+    background-color: #F6F6F6;
+}
+.localisation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEAEA;
+    border-top: 2px solid #b3b3b3;
+    font-weight: bold;
+    width: 100%;
+
+    i {
+        margin-right: 15px;
+    }
+}
+
+/** Présentation **/
+.presentation{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;       
+    &__titre {
+        font-weight: 900;
+        width: 90%;
+    }
+
+    &__description {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    &__bouton {
+        padding: 18px 18px;
+        width: 200px;
+        border-radius: 30px;
+        text-align: center;
+        cursor: pointer;
+        background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
+        font-size: 15px;
+        font-weight: bold;
+        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+
+        a {
+            color: #FFF;
+        }
+
+        &:hover{
+            opacity: 0.8;
+            box-shadow: 0.75rem 0.75rem 20px rgb(0 0 0 / 25%);
+        }
+    }
+}
+
+
+/** Fonctionnement **/
+.fonction{
+    padding: 20px 0 50px 0;
+    &__titre {
+        font-size: 25px;
+        font-weight: 900;
+    }
+
+    &__choix {
+        margin: 0 20px 20px 40px;
+        background-color: #F6F6F6;
+        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+        padding: 30px 50px 30px 18px;
+        text-align: center;
+        border-radius: 20px;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        font-weight: bold;
+        width: 250px;
+        i {
+            margin-right: 20px;
+            color: #828783;
+        }
+
+        &:hover{
+            background-color: hsl(278, 62%, 95%);
+
+            i {
+                color: $couleur-primaire;
+            }
+        }
+    }
+
+    &__nombre{
+        width: 18px;
+        height: 18px;
+        padding: 5px 5px;
+        border-radius: 50%;
+        background-color: $couleur-primaire;
+        color: #FFF;
+        position: absolute;
+        top: 30%;
+        left: -4%;
+    }
+}
+
+
+/** Restaurants **/
+#background{
+    background-color: #F6F6F6;
+    height: auto;
+    padding: 20px 0 50px 0;
+}
+
+.restaurant{
+    margin-left: 20px;
+    width: auto;
+    
+    
+    &__carte {
+        border-radius: 20px;
+        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+        background-color: white;
+        margin-bottom: 18px;
+        position: relative;
+        width: 95%;
+        height: auto;
+
+        img {
+            width: 100%;
+            height: 175px;
+            border-radius: 20px 20px 0 0;
+            object-fit: cover;
+        }
+    }
+
+    &__nouveau {
+        position: absolute;
+        background-color: $couleur-tertiaire;
+        padding: 8px 12px;
+        border-radius: 4px;
+        top: 1rem;
+        right: .75rem;
+        color: #578176;
+        font-weight: bold;
+    }
+
+    &__description {
+        display: flex;
+        position: relative;
+    }
+        
+        &__contenu {
+            padding: 0 0 0 15px;
+        }
+
+}
+
+@keyframes heart__full__opacity {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.5;
+        background-image: linear-gradient(100deg, $couleur-primaire, $couleur-secondaire);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    100% {
+        opacity: 1;
+        background-image: linear-gradient(100deg, $couleur-primaire, $couleur-secondaire);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+@keyframes heart__empty__opacity1 {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.coeur {
+    position: absolute;
+    right: 30px;
+    top: 1;
+    bottom: 40px;
+
+    &__1 {
+        position: relative;
+
+        &:hover {
+            animation: heart__empty__opacity1 1s;
+        }
+    }
+
+    &__2 {
+        position: absolute;
+        top: 0px;
+        opacity: 0;
+        color: #FFF;
+
+        &:hover {
+            animation: heart__full__opacity 1s forwards;
+        }
+    }
+}
+
+
+
+/** Media Queries **/
+
+@media screen and (min-width: 594px) and (max-width: 767px)
+{
+    .presentation{
+        height: 210px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px)
+{
+    .presentation{
+        height: 220px;
+    }
+
+    /** Fonctionnement **/
+    .fonction{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &__choix {
+            margin-bottom: 40px;
+        }
+    }
+    
+
+    /** Restaurants **/
+    .restaurant{
+        width: 95%;
+
+        &__carte {
+            width: auto;
+        }
+    }
+
+
+}
+
+
+@media screen and (min-width: 992px)
+{
+     /** Fonctionnement **/
+     .fonction{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        &__choix {
+            margin-bottom: 20px;
+        }
+    }
+
+
+    /** Restaurants **/
+    .restaurant{
+        width: 95%;
+        height: auto;
+        display: flex;
+        flex-flow: row wrap;
+        margin-left: 40px;
+
+        a{
+            width: 50%;
+            margin: 0 auto;
+        }
+       
+    }
+
+}
+
+

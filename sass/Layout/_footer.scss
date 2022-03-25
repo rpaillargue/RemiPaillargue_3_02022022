@@ -1,0 +1,28 @@
+/** Footer **/
+.footer{
+    background-color: #4f4f4f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px;
+
+    ul{
+        padding: 0;
+    }
+
+    i {
+        padding-right: 10px;
+    }
+    
+    &__titre {
+        font-family: 'Shrikhand', sans-serif;
+        color: #FFF;
+        margin: 0;
+    }
+
+    &__list {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+}
