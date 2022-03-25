@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
-@import "./sass/Utils/variables";
-@import "./sass/Base/base";
-@import "./sass/Layout/footer";
+@import "./Utils/variables";
+@import "./Base/base";
+@import "./Layout/footer";
 
 
 #bloc_page{
@@ -187,18 +187,17 @@
         transition: transform 1s;
     }
 
-    &:hover{
+    :hover{
         .fas {
             color: $couleur-tertiaire;
             animation: spin 0.5s ease-in-out;
         }
     }
-
-
+}
 
 @keyframes spin {
     0% {
-        transform: rotate(-270deg);
+        transform: rotate(-360deg);
     }
     100% {
         transform: rotate(0);
@@ -321,5 +320,4 @@
     .menu__contenu__dessert {
         width: 33%;
     }
-}
 }

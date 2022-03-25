@@ -107,8 +107,6 @@ a {
   background-color: #f6f6f6;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  /** Animation coeur **/
-  /** Bouton Commander **/
 }
 .menu__titre {
   display: flex;
@@ -233,27 +231,30 @@ a {
   overflow: hidden;
   transition: transform 1s;
 }
-.menu:hover .fas {
+.menu :hover .fas {
   color: #99E2D0;
   -webkit-animation: spin 0.5s ease-in-out;
           animation: spin 0.5s ease-in-out;
 }
+
 @-webkit-keyframes spin {
   0% {
-    transform: rotate(-270deg);
+    transform: rotate(-360deg);
   }
   100% {
     transform: rotate(0);
   }
 }
+
 @keyframes spin {
   0% {
-    transform: rotate(-270deg);
+    transform: rotate(-360deg);
   }
   100% {
     transform: rotate(0);
   }
 }
+/** Animation coeur **/
 @-webkit-keyframes heart__full__opacity {
   0% {
     opacity: 0;
@@ -310,37 +311,39 @@ a {
     opacity: 0;
   }
 }
-.menu .coeur {
+.coeur {
   position: absolute;
   right: 30px;
   top: 1;
   cursor: pointer;
 }
-.menu .coeur__1 {
+.coeur__1 {
   position: relative;
 }
-.menu .coeur__1:hover {
+.coeur__1:hover {
   -webkit-animation: heart__empty__opacity1 1s;
           animation: heart__empty__opacity1 1s;
 }
-.menu .coeur__2 {
+.coeur__2 {
   position: absolute;
   top: 0px;
   opacity: 0;
   color: #FFF;
 }
-.menu .coeur__2:hover {
+.coeur__2:hover {
   -webkit-animation: heart__full__opacity 1s forwards;
           animation: heart__full__opacity 1s forwards;
 }
-.menu .bouton__commander {
+
+/** Bouton Commander **/
+.bouton__commander {
   background-color: #f6f6f6;
   padding-bottom: 70px;
   padding-top: 30px;
   display: flex;
   justify-content: center;
 }
-.menu .bouton__commander--pink {
+.bouton__commander--pink {
   background-color: #9356DC;
   padding: 15px 50px;
   border-radius: 30px;
@@ -353,21 +356,25 @@ a {
   transition: background-color 250ms;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
-.menu .bouton__commander--pink:hover {
+.bouton__commander--pink:hover {
   opacity: 0.8;
   box-shadow: 0.75rem 0.75rem 20px rgba(0, 0, 0, 0.25);
 }
+
 @media screen and (min-width: 900px) {
-  .menu .menu__carte {
+  .menu__carte {
     display: flex;
   }
-  .menu .menu__contenu__entree {
+
+  .menu__contenu__entree {
     width: 33%;
   }
-  .menu .menu__contenu__plat {
+
+  .menu__contenu__plat {
     width: 33%;
   }
-  .menu .menu__contenu__dessert {
+
+  .menu__contenu__dessert {
     width: 33%;
   }
 }/*# sourceMappingURL=menu.css.map */
