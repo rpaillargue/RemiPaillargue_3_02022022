@@ -116,7 +116,7 @@
         margin: 0 auto;
         background-color: #fff;
         cursor: pointer;
-        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+        box-shadow: 0.25rem 0.25rem 10px rgba(0 0 0 / 25%);
         border-radius: 15px;
         padding-left: 10px;
         margin-bottom: 20px;
@@ -291,11 +291,11 @@
         font-size: 18px;
         background-image: linear-gradient($couleur-secondaire, $couleur-primaire);
         transition: background-color 250ms;
-        box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+        box-shadow: 0.25rem 0.25rem 10px rgba(0 0 0 / 25%);
 
         &:hover{
             opacity: 0.8;
-            box-shadow: 0.75rem 0.75rem 20px rgb(0 0 0 / 25%);
+            box-shadow: 0.75rem 0.75rem 20px rgba(0 0 0 / 25%);
         }
     }
 }
