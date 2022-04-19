@@ -175,6 +175,26 @@ a {
   padding-left: 10px;
   margin-bottom: 20px;
 }
+.menu__plat:hover .fas {
+  -webkit-animation: spin 0.5s ease-in-out;
+          animation: spin 0.5s ease-in-out;
+}
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
 .menu__description {
   display: flex;
   width: 100%;
@@ -229,31 +249,9 @@ a {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  transition: transform 1s;
-}
-.menu :hover .fas {
   color: #99E2D0;
-  -webkit-animation: spin 0.5s ease-in-out;
-          animation: spin 0.5s ease-in-out;
 }
 
-@-webkit-keyframes spin {
-  0% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(-360deg);
-  }
-  100% {
-    transform: rotate(0);
-  }
-}
 /** Animation coeur **/
 @-webkit-keyframes heart__full__opacity {
   0% {

@@ -120,6 +120,21 @@
         border-radius: 15px;
         padding-left: 10px;
         margin-bottom: 20px;
+
+        &:hover {
+            .fas {
+                animation: spin 0.5s ease-in-out;
+            }
+        }
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(-360deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
     }
 
     &__description {
@@ -184,26 +199,9 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
-        transition: transform 1s;
-    }
-
-    :hover{
-        .fas {
-            color: $couleur-tertiaire;
-            animation: spin 0.5s ease-in-out;
-        }
+        color: $couleur-tertiaire;  
     }
 }
-
-@keyframes spin {
-    0% {
-        transform: rotate(-360deg);
-    }
-    100% {
-        transform: rotate(0);
-    }
-}
-
 
 
 
